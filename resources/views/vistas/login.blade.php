@@ -119,9 +119,9 @@
     <button type="submit">Ingresar</button>
 </form>
 
-<div class="register-link">
+<div class="registro-link">
     ¿No tienes cuenta?
-    <a href="{{ route('register') }}">Crear cuenta.</a>
+    <a href="{{ route('registro') }}">Crear cuenta.</a>
 </div>
 
 

@@ -3,7 +3,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Login</title>
+    <title>Registro</title>
 
 <style>
     * {
@@ -103,7 +103,7 @@
     <h2>SIAU</h2>
 
 
-<form method="POST" action="{{ route('register') }}">
+<form method="POST" action="{{ route('registro') }}">
     @csrf
 
     <div class="input-group">
@@ -127,6 +127,7 @@
         <input type="number" name="codigo" placeholder="123456" required>
     </div>
 
+</div >
     <button type="submit">Registrar.  </button>
 </form>
 

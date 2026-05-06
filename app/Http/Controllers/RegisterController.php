@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Hash;
 
 class RegisterController extends Controller
 {
-    public function register(Request $request)
+    public function registro(Request $request)
     {
         // 1. Validación
         $data = $request->validate([
@@ -25,6 +25,6 @@ class RegisterController extends Controller
         ]);
 
         // 3. Redirigir (puedes también logear automáticamente)
-        return redirect()->route('login')->with('success', 'Cuenta creada');
+        return redirect()->route('home')->with('success', 'Cuenta creada');
     }
 }
