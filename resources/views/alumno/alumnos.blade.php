@@ -131,7 +131,8 @@ body{
     width:260px;
     min-height:180px;
     position: relative;
-    left: 5px;
+    left: 20px;
+    top: 20px;
     
 }
 
@@ -145,7 +146,22 @@ body{
     width:260px;
     min-height:180px;
     position: relative;
-    left:290px;
+    left:550px;
+    bottom: 260px;
+}
+
+.tarjeta3{
+
+    background:white;
+    border:3px solid #73d9ff;
+    box-shadow:0 0 10px rgba(183,0,255,0.4);
+    border-radius:15px;
+    padding:20px;
+    width:260px;
+    min-height:180px;
+    position: relative;
+    left:550px;
+    bottom: 200px;
 }
 
 .icono-usuario{
@@ -226,57 +242,30 @@ h1{
             <div class="circulo gris"></div>
         </div>
 
-        Menu Principal - Status Alumno
+        Bienvenido **Usuario**!!
 
     </div>
 
-    <div class="contenido">
+<div class="tarjeta1">
+    <div class="icono-usuario"></div>
+    <div class="texto">
+        Nombre: Juan Pablo<br>
+        Codigo: 217773127<br>
+        Correo: jplm2312@alumnos.udg.max<br>
+        Carrera: Informatica<br>
+        Activo: Si
+    </div>
+</div>
 
-        <div class="menu-lateral">
-
-            <a href="{{ route('alumnos') }}">Alumno</a>
-            <a href="#">Registros</a>
-            <a href="#">Servicios</a>
-            <a href="#">Horario</a>
-            <a href="#">Soporte</a>
-            <a href="#">Eventos próximos</a>
-
-        </div>
-
-        <div class="panel-principal">
-
-            <h1>Menu principal</h1>
-
-            <div class="tarjetas">
-
-                <div>
-                    <div class="tarjeta1">
-                        <div class="icono-usuario"></div>
-                    </div>
-
-                    <div class="texto">
-                        Estatus de Alumno<br>
-                        - Calificación.<br>
-                        - Clases pendientes hoy
-                    </div>
-                </div>
-
-                <div>
-                    <div class="tarjeta2">
+<div class="tarjeta2">
                         <p style="font-weight:bold; line-height:1.5;">
-                            Notas de eventos próximos,<br>
+                            Resumen de Calificaciones.<br>
                         </p>
-                    </div>
-
-                    
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
+</div>
+<div class="tarjeta3">
+                        <p style="font-weight:bold; line-height:1.5;">
+                            Historial Academico.<br>
+                        </p>
 </div>
 
 </body>
