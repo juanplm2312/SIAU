@@ -125,10 +125,10 @@
  <div class="input-group">
         <label>Codigo de estudiante.</label>
         <input type="number" name="codigo" placeholder="123456" required>
+        <button type="submit">Registrar.  </button>
     </div>
 
-</div >
-    <button type="submit">Registrar.  </button>
+    
 </form>
 
 </body>

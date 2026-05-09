@@ -25,6 +25,6 @@ class RegisterController extends Controller
         ]);
 
         // 3. Redirigir (puedes también logear automáticamente)
-        return redirect()->route('home')->with('success', 'Cuenta creada');
+        return redirect('/')->with('success', 'Cuenta creada');
     }
 }
