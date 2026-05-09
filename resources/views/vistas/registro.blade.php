@@ -102,6 +102,13 @@
 <div class="login-box">
     <h2>SIAU</h2>
 
+@if ($errors->any())
+    <div style="color:red;">
+        @foreach ($errors->all() as $error)
+            <p>{{ $error }}</p>
+        @endforeach
+    </div>
+@endif
 
 <form method="POST" action="{{ route('registro') }}">
     @csrf

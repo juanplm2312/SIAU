@@ -4,27 +4,34 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
-use Illuminate\Support\Facades\Hash;
 
 class RegisterController extends Controller
 {
     public function registro(Request $request)
     {
-        // 1. Validación
-        $data = $request->validate([
-            'email' => ['required', 'email', 'unique:users,email'],
-            'password' => ['required', 'confirmed', 'min:6'],
-            'codigo' => ['required', 'numeric', 'unique:users,codigo'],
-        ]);
+        try {
 
-        // 2. Crear usuario
-        $user = User::create([
-            'email' => $data['email'],
-            'password' => Hash::make($data['password']),
-            'codigo' => $data['codigo'],
-        ]);
+            $data = $request->validate([
+                'email' => ['required', 'email', 'unique:users,email'],
+                'password' => ['required', 'confirmed', 'min:6'],
+                'codigo' => ['required', 'numeric', 'unique:users,codigo'],
+            ]);
 
-        // 3. Redirigir (puedes también logear automáticamente)
-        return redirect('/')->with('success', 'Cuenta creada');
+            User::create([
+                'email' => $data['email'],
+                'password' => bcrypt($data['password']),
+                'codigo' => $data['codigo'],
+            ]);
+
+            return redirect()->route('home')
+                ->with('success', 'Cuenta creada correctamente');
+
+        } catch (\Exception $e) {
+
+            return back()->withErrors([
+                'error' => $e->getMessage()
+            ]);
+
+        }
     }
 }
