@@ -20,7 +20,7 @@ class AuthController extends Controller
             $request->session()->regenerate();
 
             // Redirección al dashboard
-            return redirect()->route('dashboard');
+            return redirect()->route('menu');
         }
 
         // Si falla
